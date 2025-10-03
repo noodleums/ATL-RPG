@@ -4,7 +4,7 @@ inv = ["fists", "g27"]
 location = "wPark"
 money = 50
 health = 100
-jc = 15
+jc = 100
 def jumped(money, health):
   ynAmount = random.randint(2,4)
   print(f"A group of {ynAmount} YNs jump you")
@@ -32,15 +32,18 @@ def jumped(money, health):
         choice = input("Choose item to defend yourself\n")
         if choice.lower() == "fists":
           survival = random.randint(1,5)
-          if survival <= 2:
-            print("You tank the 9 and escape")
-            health -= random.randint(40,70)
-          elif 3 <= survival <= 4:
+          if survival == 1:
+            print("You got lit up like the 4th of July")
+            sys.exit(0)
+          elif 2 <= survival <= 4:
             print("They shot you and took your money")
             health -= random.randint(40, 70)
             money *= .70
+            break
           else:
-            print("You give the move that made LeBron famous and they scatter")
+            print("You give them move that made lebron famous and they scatter")
+            break
+          break
         elif choice.lower() == "g27":
           survival = random.randint(1,6)
           if survival <= 4:
@@ -49,7 +52,7 @@ def jumped(money, health):
           else:
             print("Get domed fn")
             sys.exit(0)
-        break
+          break
       break
     elif choice.lower() == "comply":
       print("They run your pockets twin")
@@ -60,7 +63,7 @@ def jumped(money, health):
   if health <= 0:
     print("You succumb to your injuries")
     sys.exit(0)
-  print(f"health: {health}\nmoney: {money}")
+  print(f"health: {health}\nmoney: ${money}")
   return money, health
   
 def choices(money, health, location):
@@ -76,8 +79,8 @@ def choices(money, health, location):
         money, health = jumped(money, health)
   elif location == "ashview":
     choice = input("NORTH to Washigton Park\nWEST to Mozley Park\n")
-    location = "wPark"
     if choice.lower() == "north":
+      location = "wPark"
       if random.randint(1,100) <= jc:
         money, health = jumped(money, health)
     elif choice.lower() == "west":
@@ -86,8 +89,8 @@ def choices(money, health, location):
         money, health = jumped(money, health)
   elif location == "vine":
     choice = input("WEST to Washigton Park\n")
-    location = "wPark"
     if choice.lower() == "west":
+      location = "wPark"
       if random.randint(1,100) <= jc:
         money, health = jumped(money, health)
   elif location == "mPark":
@@ -102,4 +105,3 @@ print(f"health: {health}")
 print(f"money: ${money}")
 while True:
   money, health, location = choices(money, health, location)
-  
