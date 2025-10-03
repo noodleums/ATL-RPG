@@ -4,7 +4,7 @@ inv = ["fists", "g27"]
 location = "wPark"
 money = 50
 health = 100
-jc = 100
+jc = 15
 def jumped(money, health):
   ynAmount = random.randint(2,4)
   print(f"A group of {ynAmount} YNs jump you")
