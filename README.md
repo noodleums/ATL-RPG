@@ -1,10 +1,9 @@
-Installation instructions:
-If using online compiler-
+Installation instructions:  
+
+If using an online compiler:
 1. Go to an online python compiler [this one works fine](https://www.online-python.com/)
-2. Copy and paste file contents into the online compiler  
-If you require the file-
-1. Download main.py
-2. Preferably add it to an empty folder to prevent file conflicts
+2. Copy and paste file contents into the online compiler
+
 Game instructions:  
 When you are given a choice, to select that choice, you type (in upper or lower case no spaces) the word that is uppercase.  
 Ex:  
