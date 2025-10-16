@@ -39,7 +39,7 @@ def lick(money, health, inv):
   robOpt = random.randint(1, 4)
   if robOpt <= 3:
       print("Grandma walking with her purse out")
-      choice = input("SNATCH\nGUNPOINT\nASSUALT\n")
+      choice = input("SNATCH\nGUNPOINT\nASSAULT\n")
       if choice.lower() == "snatch":
         chance = random.randint(1, 4)
         if chance == 1:
@@ -61,14 +61,14 @@ def lick(money, health, inv):
         else:
           print("Grandma hands everything over")
           money += random.uniform(30, 100)
-      elif choice.lower() == "assualt":
+      elif choice.lower() == "assault":
         print("You give grandma the move that made lebron famous")
         chance = random.randint(1,3)
         if chance == 1:
           print("Someone witnesses the commotion and calls the police")
           chance = random.randint(1,3)
           if chance == 1:
-            print("G-ma ratted, felony assualt, battery, and attempted robbery. Facing 20+ years")
+            print("G-ma ratted, felony assault, battery, and attempted robbery. Facing 20+ years")
             inv = ["fists"]
             money = 0
             health = 100
@@ -252,4 +252,3 @@ print(f"health: {health}")
 print(f"money: {round(money, 2)}")
 while True:
   money, health, location, inv = choices(money, health, location, inv)
-  
