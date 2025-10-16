@@ -16,4 +16,6 @@ Followed by pressing the enter key to confirm
 Update Logs
 v1.1
 - Added robberies
-- Added Vine City store  
+- Added Vine City store. 
+
+[Report a bug](https://forms.gle/QLuSXGACCY2TCHaj6)
